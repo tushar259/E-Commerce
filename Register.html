@@ -1,0 +1,144 @@
+<!DOCKTYPE html>
+<html>
+
+<head> <title> Registration </title> 
+<script type="text/javascript">
+function chk()
+{
+	var flag=true;
+	var g=document.getElementById("tx").value.length;
+	var ge=document.fm.email.value.length;
+	var gd=document.fm.date.value.length;
+	var gp=document.fm.pass.value.length;
+	var gcp=document.fm.conpass.value.length;
+	
+	
+	document.getElementById("sdmsg").innerHTML="";
+	document.getElementById("sdmsg1").innerHTML="";
+	document.getElementById("sdmsg2").innerHTML="";
+	document.getElementById("sdmsg3").innerHTML="";
+	document.getElementById("sdmsg4").innerHTML="";
+	
+	if(g==0)
+	{
+		q=document.getElementById("sdmsg");
+		q.innerHTML="Empty user name field";
+		flag=false;
+	}
+	else if(ge==0)
+	{
+		qe=document.getElementById("sdmsg1");
+		qe.innerHTML="Empty email field";
+		flag=false;
+	}
+	else if(gd==0)
+	{
+		qd=document.getElementById("sdmsg2");
+		qd.innerHTML="Empty date field";
+		flag=false;
+	}
+	else if(gp==0)
+	{
+		qp=document.getElementById("sdmsg3");
+		qp.innerHTML="Empty password field";
+		flag=false;
+	}
+	else if(gcp==0)
+	{
+		qcp=document.getElementById("sdmsg4");
+		qcp.innerHTML="Empty confirm password field";
+		flag=false;
+	}
+	return flag;
+}
+function wrongEmail() {
+	//document.getElementById("spinner").style.visibility="visible";
+	var v=document.getElementById("mail").value;
+	if(v.length==0){
+	    document.getElementById('btn').style.visibility = 'hidden';
+	}
+	//var v2=document.getElementById("sdmsg1");
+	var  xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {			
+			var m=document.getElementById("sdmsg1");
+			m.innerHTML=xmlhttp.responseText;
+			//document.getElementById("spinner").style.visibility="hidden";
+			//alert(xmlhttp.responseText);
+			if(xmlhttp.responseText=="Available"){
+	            document.getElementById('btn').style.visibility = 'visible';
+	        }
+	        else if(xmlhttp.responseText=="Not Available"){
+	            document.getElementById('btn').style.visibility = 'hidden';
+	        }
+		}
+	};
+ 	//var url="server.php?ist=ok&un="+v+"&cg="+v2;
+ 	var url="email.php?email="+v;
+	//alert(url);
+	xmlhttp.open("GET", url,true);
+	xmlhttp.send();
+}
+function wrongPass() {
+	var v=document.getElementById("pass").value;
+	var v2=document.getElementById("conpass").value;
+	if(v==v2){
+	    document.getElementById('btn').style.visibility = 'visible';
+		var v3=document.getElementById("sdmsg4");
+		v3.innerHTML="";
+	}
+	else if(v!=v2){
+	    document.getElementById('btn').style.visibility = 'hidden';
+		var v3=document.getElementById("sdmsg4");
+		v3.innerHTML="Password didn't match";
+	}
+}
+</script>
+</head>
+
+<body>
+<form action="Register.php" method="post" name="fm">
+
+
+<label>Name(Character/String): </label><br>
+<input type="text" name="name" id="tx"><br>
+<span id="sdmsg"></span><br><br>
+
+<label > Email(Character/String):  </label> <br>
+<input id="mail" type="text" name="email" onkeyup="wrongEmail()"><br>
+<span id="sdmsg1"></span><br><br>
+
+<label>Date of birth(day/month/year):</label><br>
+<input type="text" name="date"><br>
+<span id="sdmsg2"></span><br><br>
+
+<label>Select gender:</label><br>
+<input type="radio" name="gender" value="male" checked>Male<br>
+<input type="radio" name="gender" value="female">Female<br>
+<input type="radio" name="gender" value="other">Other<br><br>
+
+<label> Password:  </label> <br>
+<input id="pass" type="password" name="pass"><br>
+<span id="sdmsg3"></span><br><br>
+
+<label>Confirm Password:  </label> <br>
+<input id="conpass" type="password" name="conpass" onkeyup="wrongPass()"><br>
+<span id="sdmsg4"></span><br><br>
+
+
+
+
+
+
+<input id="btn" type="submit" value="Sign up" onclick="return chk()"><br>
+
+
+
+
+
+</form>
+
+
+</body>
+
+</html>

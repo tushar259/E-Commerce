@@ -1,0 +1,101 @@
+body
+{
+	background-color:#ffffcc;
+	margin:0px;
+	padding:0px;
+	
+}
+.Start
+{
+	color:white;
+	background-color:red;
+	width:1550px;
+	height:35px;
+	
+}
+
+
+.Start p
+{
+	float:left;
+	margin:0px;
+	padding-top:5px;
+	
+}
+
+.Start h4
+{
+	padding:5px 0px 0px 1300px;
+}
+
+
+.head
+{
+	
+	background-color:#669999;
+	
+	height:100px;
+}
+.head marquee
+{
+	padding-right:800px;
+	padding-left:600px;
+    font-family: 'Anton', sans-serif;
+	font-size:20px;
+	float:left;
+	
+	
+}
+
+.srh
+{
+	margin-left:650px;
+}
+
+.log
+{
+	font-size:15px;
+	color:white;
+	text-decoration:none;
+	float:right;
+	padding:10px 150px 0px 0px;
+	
+	
+}
+.nav a
+{
+	
+	margin:3px;
+	display:block;
+	width:300px;
+	background-color:black;
+	color:white;
+	text-decoration:none;
+	font-size:25px;
+	float:left;
+	
+	
+}
+
+.a:hover
+{
+	color:red;
+}
+
+.img
+{
+
+	margin-left:2px;
+
+}
+
+.footer a
+{
+	color:#000066;
+	text-decoration:none;
+}
+
+.ah:hover
+{
+	color:#009933;
+}

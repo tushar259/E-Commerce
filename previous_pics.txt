@@ -1,0 +1,16 @@
+<h1>Price: 2000Tk</h1><br>
+<img src="Images/menc1.jpg" title="fasion" height="400" width="300" class="mn1">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 2500Tk</h1><br>
+<img src="Images/menc2.jpg" title="fasion" height="400" width="300" class="mn2">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 3000Tk</h1><br>
+<img src="Images/menc3.jpg" title="fasion" height="400" width="300" class="mn3">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 500Tk</h1><br>
+<img src="Images/menc4.jpg" title="fasion" height="400" width="300" class="mn4">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 1500Tk</h1><br>
+<img src="Images/menc5.jpg" title="fasion" height="400" width="300" class="mn5">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 500Tk</h1><br>
+<img src="Images/menc6.jpg" title="fasion" height="400" width="300" class="mn6">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 1500Tk</h1><br>
+<img src="Images/menc7.jpg" title="fasion" height="400" width="300" class="mn7">Qty: <input type="text"> <input type="button" value="Add to cart">
+<h1>Price: 2000Tk</h1><br>
+<img src="Images/menc8.jpg" title="fasion" height="400" width="300" class="mn8">Qty: <input type="text"> <input type="button" value="Add to cart">
